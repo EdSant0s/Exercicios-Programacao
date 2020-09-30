@@ -1,8 +1,11 @@
 const Flag = require('../models/Flag');
 
 const index = (req, res) => {
-  // TODO
+  const flags = Flag.readAll();
+
+  res.render('flags/index.njk', { flags });
 };
+
 
 const readAll = (req, res) => {
   const flags = Flag.readAll();

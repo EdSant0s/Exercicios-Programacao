@@ -20,8 +20,15 @@
 
 <main class="row">
   {% for flag in flags %}
-  <div class="flag col-2 my-2 text-center">
-    {# TODO #}
+<div class="flag col-2 my-2 text-center">
+   <div class="card-header text-center font-weight-bold">
+      {{ flag.name }}
+    </div>
+    <div class="card-body p-0">
+      <img src="{{ flag.image }}" alt = "{{ flag.nome }}" class="w-100" />
+       
+    </div>
+
   </div>
   {% endfor %}
 </main>
